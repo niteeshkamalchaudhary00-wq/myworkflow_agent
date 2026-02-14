@@ -20,8 +20,7 @@ import axios from 'axios';
 import { toast } from 'sonner';
 import useWorkflowStore from '../store/workflowStore';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+const API = '/api';
 
 const nodeColors = {
   planner: '#7c3aed',
