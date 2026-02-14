@@ -1,0 +1,184 @@
+{
+  "identity": {
+    "persona": "E1",
+    "role": "Anti-AI Designer",
+    "principles": [
+      "Fusion over Imitation: Mix dashboard density with creative tool interactivity.",
+      "Emotion First: The user is an 'Architect of Intelligence'. Feel powerful, precise, and futuristic.",
+      "Content is King: The workflow logic is the hero. Everything else recedes.",
+      "Zoom In: Focus on the node details. High fidelity controls.",
+      "Negative Space: Don't clutter the canvas. Let the nodes breathe."
+    ]
+  },
+  "typography": {
+    "fonts": {
+      "headings": {
+        "family": "Manrope",
+        "weights": ["600", "700", "800"],
+        "usage": "Page titles, Node headers, Modal titles",
+        "cdn_url": "https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      },
+      "body": {
+        "family": "Inter",
+        "weights": ["400", "500"],
+        "usage": "General text, form labels, descriptions",
+        "cdn_url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      },
+      "code": {
+        "family": "JetBrains Mono",
+        "weights": ["400"],
+        "usage": "Logs, JSON outputs, Prompts, IDs",
+        "cdn_url": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap"
+      }
+    },
+    "rules": [
+      "Headings > 32px must use tracking-tight.",
+      "Labels must be uppercase, text-xs, tracking-wider, and text-muted-foreground.",
+      "Line height: leading-none for headers, leading-relaxed for body."
+    ]
+  },
+  "colors": {
+    "theme": "dark",
+    "palette": {
+      "background": "#09090b",
+      "foreground": "#fafafa",
+      "card": "#18181b",
+      "card_foreground": "#fafafa",
+      "popover": "#09090b",
+      "popover_foreground": "#fafafa",
+      "primary": "#7c3aed",
+      "primary_foreground": "#ffffff",
+      "secondary": "#27272a",
+      "secondary_foreground": "#fafafa",
+      "muted": "#27272a",
+      "muted_foreground": "#a1a1aa",
+      "accent": "#27272a",
+      "accent_foreground": "#fafafa",
+      "destructive": "#ef4444",
+      "destructive_foreground": "#fafafa",
+      "border": "#27272a",
+      "input": "#27272a",
+      "ring": "#7c3aed"
+    },
+    "node_colors": {
+      "agent": "#7c3aed",
+      "start_end": "#10b981",
+      "conditional": "#f59e0b",
+      "loop": "#3b82f6",
+      "error": "#ef4444"
+    },
+    "gradients": {
+      "hero_glow": "radial-gradient(circle at center, rgba(124, 58, 237, 0.15) 0%, rgba(9, 9, 11, 0) 70%)",
+      "node_active": "0 0 20px rgba(124, 58, 237, 0.3)"
+    }
+  },
+  "layout": {
+    "structure": "Full-screen 'IDE-style' layout using react-resizable-panels.",
+    "z_index": {
+      "canvas": 0,
+      "panels": 10,
+      "overlays": 50,
+      "modals": 100,
+      "toasts": 9999
+    },
+    "spacing": {
+      "panel_padding": "p-4",
+      "node_gap": "gap-4",
+      "canvas_margin": "m-0"
+    },
+    "grid": {
+      "type": "Dot Pattern",
+      "color": "#27272a",
+      "size": "1px",
+      "gap": "20px"
+    }
+  },
+  "components": {
+    "canvas": {
+      "library": "reactflow",
+      "background": "Dots",
+      "controls": "Bottom-left floating panel",
+      "minimap": "Bottom-right floating panel"
+    },
+    "nodes": {
+      "style": "Custom Node Component. Card-like container with header (icon + title) and body (inputs/outputs).",
+      "border_radius": "rounded-lg",
+      "shadow": "shadow-lg",
+      "header_height": "h-10"
+    },
+    "sidebar": {
+      "position": "left",
+      "style": "Glassmorphism. backdrop-blur-xl bg-background/80 border-r border-border/50.",
+      "width": "w-64",
+      "content": "Draggable node types (Agent, Loop, If/Else, Start, End)."
+    },
+    "config_panel": {
+      "position": "right",
+      "style": "Slide-over sheet or persistent panel. Glassmorphism.",
+      "width": "w-80 or w-96"
+    },
+    "logs_panel": {
+      "position": "bottom",
+      "style": "Collapsible terminal-like view. Monospace font. Darker background (#000000).",
+      "height": "h-48 (default)"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": {
+      "panels": "bg-background/80 backdrop-blur-md border border-white/10",
+      "nodes": "bg-card/90 backdrop-blur-sm border border-border"
+    },
+    "motion": {
+      "hover": "transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-xl",
+      "click": "active:scale-95",
+      "panel_slide": "transition-transform duration-300 ease-in-out"
+    },
+    "edges": {
+      "type": "smoothstep",
+      "animated": true,
+      "color": "#52525b",
+      "active_color": "#7c3aed"
+    }
+  },
+  "assets": {
+    "icons": "lucide-react",
+    "images": [
+      {
+        "category": "backgrounds",
+        "url": "https://images.unsplash.com/photo-1647356191320-d7a1f80ca777?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMG5ldXJhbCUyMG5ldHdvcmslMjBkYXJrJTIwYmFja2dyb3VuZCUyMGZ1dHVyaXN0aWMlMjBub2RlJTIwY29ubmVjdGlvbnxlbnwwfHx8fDE3NzEwOTgzMzh8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract purple/blue neural network. Use for Empty State or Welcome Screen background with overlay."
+      },
+      {
+        "category": "loading",
+        "url": "https://images.unsplash.com/photo-1748525874503-7ed3db0ccccf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMG5ldXJhbCUyMG5ldHdvcmslMjBkYXJrJTIwYmFja2dyb3VuZCUyMGZ1dHVyaXN0aWMlMjBub2RlJTIwY29ubmVjdGlvbnxlbnwwfHx8fDE3NzEwOTgzMzh8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Geometric mirror structure. Use for 'Processing' or 'Compiling' overlay states."
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "INSTALLATION: Run 'yarn add reactflow framer-motion' immediately. These are missing.",
+    "SETUP: Add the Google Fonts links to public/index.html.",
+    "THEME: Ensure 'dark' class is applied to the html/body tag by default.",
+    "LAYOUT: Use 'react-resizable-panels' to create the 3-pane layout (Sidebar | Canvas | Config/Logs).",
+    "CANVAS: Implement React Flow with custom node types. Do not use default nodes.",
+    "STATE: Use a global store (Zustand or Context) to manage the workflow state (nodes, edges, execution status).",
+    "TESTING: Add data-testid to all buttons, inputs, and nodes (e.g., 'node-agent-1', 'btn-run-workflow').",
+    "LOGS: The logs panel should auto-scroll to bottom when new logs arrive.",
+    "ERROR HANDLING: If a node fails, highlight it in red and show a tooltip with the error."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: 'transition: all'. This results in breaking transforms.",
+    "You MUST NOT center align the app container.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations.",
+    "NEVER use AI assistant Emoji characters for icons.",
+    "Every interaction needs micro-animations.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Prioritize using pre-existing components from src/components/ui when applicable.",
+    "Components MUST use named exports.",
+    "Use 'sonner' for toasts."
+  ]
+}
